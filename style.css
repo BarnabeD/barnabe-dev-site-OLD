@@ -1,12 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Major+Mono+Display&family=Open+Sans&display=swap');
 
-.major {
-  font-family: 'Major Mono Display', monospace;
-}
-
+/*Default cleaning :*/
 * {
   margin: 0;
 }
+
 
 body {
   background-color: black;
@@ -30,6 +28,13 @@ body {
   position: sticky;
   top: 0;
   background: black;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.theme-form-wrapper {
+  margin-top: auto;
 }
 
 .right-container {
@@ -54,7 +59,6 @@ body {
 
 @media screen and (min-width:640px) {
   .left-container {
-    flex: 1;
     background-color:blue;
     color:red;
     flex: 0;
@@ -102,6 +106,18 @@ body {
   }
 }
 
-blue {
+
+/*UTILITIES*/
+/*Colors*/
+.blue {
   color: blue;
+}
+
+.bg-blue {
+  background-color: blue;
+}
+
+/*Fonts*/
+.major {
+  font-family: 'Major Mono Display', monospace;
 }
