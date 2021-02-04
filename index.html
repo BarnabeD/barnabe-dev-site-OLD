@@ -20,12 +20,18 @@
         </ul>
       </div>
       <div class="theme-form-wrapper">
-      <label for="theme-select">Choose a theme:</label>
+        <p>Choose a theme:</p>
+        <ul id="theme-select" class="colapsed">
+          <li data-value="default" class="visible">Default</li>
+          <li data-value="america" class="hidden">America</li>
+          <li data-value="soft" class="hidden">Soft</li>
+        </ul>
+      <!-- <label for="theme-select">Choose a theme:</label>
       <select name="themes" id="theme-select">
-          <option value="">Default : black</option>
+          <option value="default">Default : black</option>
           <option value="america">America</option>
           <option value="soft">Soft</option>
-      </select>
+      </select> -->
       </div>
     </div>
     <div class="right-container">
@@ -79,4 +85,5 @@
     </div>
   </div>
 </body>
+<script src="scripts/main.js"></script>
 </html>

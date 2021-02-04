@@ -2,14 +2,17 @@
 
 /*Default cleaning :*/
 * {
+  padding: 0;
   margin: 0;
 }
 
-
 body {
-  background-color: black;
+  transition: all 1s;
+  margin: 0;
+  background-color: var(--theme-background-color);
   margin: 0;
   font-family: 'Open Sans', sans-serif;
+  height: 100%;
 }
 
 .flex-wrapper {
@@ -19,15 +22,13 @@ body {
 }
 
 .left-container {
-  /*flex: 1;*/
   width: 100%;
-  color: white;
+  color: var(--theme-text-color);
   min-width: 300px;
-  border: red solid 1px ;
   position: -webkit-sticky;
   position: sticky;
   top: 0;
-  background: black;
+  background: var(--theme-background-color);
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
@@ -37,16 +38,17 @@ body {
   margin-top: auto;
 }
 
+#theme-select {
+  box-shadow: inset 0px 0px 0px 1px var(--theme-border-color) ;
+}
+
 .right-container {
-  /*flex: 1;*/
   width: 100%;
-  /*min-width: 300px;*/
-  border: yellow solid 1px ;
-  color: white;
+  color: var(--theme-text-color);
 }
 
 .work-card {
-
+  box-shadow: inset 0px -1px 0px 0px var(--theme-border-color);
 }
 
 .work-description {
@@ -59,8 +61,8 @@ body {
 
 @media screen and (min-width:640px) {
   .left-container {
-    background-color:blue;
-    color:red;
+    background-color: var(--theme-background-color);
+    color: var(--theme-text-color);
     flex: 0;
     min-width: 200px;
     height: 100vh;
@@ -69,19 +71,23 @@ body {
   .right-container {
     flex: 1;
   }
+
+  #theme-select {
+  box-shadow: inset 0px 1px 0px 0px var(--theme-border-color),
+              inset -1px 0px 0px 0px var(--theme-border-color) ;
+}
 }
 
 @media screen and (min-width:1024px) {
   .left-container {
-    background-color:orange;
-    color:green;
+    background-color: var(--theme-background-color);
+    color: var(--theme-text-color);
     min-width: 270px;
     align-self: flex-start;
   }
 
   .work-card {
-    background-color: lightgreen;
-    border: blue solid 1px;
+    background-color: var(--theme-background-color);
     display: flex;
     flex-wrap: nowrap;
     flex-direction: row;
@@ -107,10 +113,46 @@ body {
 }
 
 
+:root {
+  --theme-background-color: black;
+  --theme-text-color: white;
+  --theme-border-color: white;
+}
+
+
+
 /*UTILITIES*/
+.hidden {
+  opacity: 0;
+  max-height: 0;
+  visibility: hidden;
+}
+
+.visible {
+  max-height: 100px;
+  opacity: 1;
+  visibility: visible;
+}
+
 /*Colors*/
+.black {
+  color: black;
+}
+
+.white {
+  color: white;
+}
+
 .blue {
   color: blue;
+}
+
+.blue {
+  color: red;
+}
+
+.bg-black {
+  background-color: blue;
 }
 
 .bg-blue {
