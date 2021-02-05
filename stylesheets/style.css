@@ -1,0 +1,274 @@
+/*Default cleaning :*/
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  transition: background-color 3s;
+}
+
+body {
+  margin: 0;
+  background: var(--theme-body-color);
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+  height: 100%;
+  cursor: crosshair;
+}
+
+.flex-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-self: flex-start;
+}
+
+/*LEFT AREA*/
+.left-container {
+  width: 100%;
+  color: var(--theme-text-color);
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  background: var(--theme-background-color);
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  justify-content: space-between;
+  border-bottom: solid 1px var(--theme-border-color);
+}
+
+.presentation {
+  margin-right: 10px;
+  padding-bottom: 10px;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: flex-start;
+}
+
+#ruby {
+  width: 4rem;
+  stroke: var(--theme-ruby-color);
+  fill: var(--theme-ruby-color);
+  animation:tilt 3s linear infinite;
+}
+@keyframes tilt {
+  0% {
+    /*-webkit-transform: rotate(0deg);*/
+    transform:rotate(0deg);
+  }
+  25% {
+    /*-webkit-transform: rotate(45deg);*/
+    transform:rotate(45deg);
+  }
+  50% {
+    /*-webkit-transform: rotate(90deg);*/
+    transform:rotate(0deg);
+  }
+  75% {
+    /*-webkit-transform: rotate(90deg);*/
+    transform:rotate(-45deg);
+  }
+  100% {
+    /*-webkit-transform: rotate(90deg);*/
+    transform:rotate(0deg);
+  }
+}
+
+.name {
+  margin-bottom: 8px;
+}
+
+.theme-form-wrapper {
+  margin-top: auto;
+  font-size: 3vh;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#theme-select {
+  /*width: 60%;*/
+  border: solid 1px var(--theme-border-color);
+  margin-bottom: 10px;
+  padding: 0px 20px;
+}
+
+.menu {
+  width: 0;
+  height: 100%;
+  font-size: 8vh;
+  z-index: 1;
+  position: fixed;
+  top: 0;
+  right: 0;
+  text-align: center;
+  background: var(--theme-menu-color);
+  opacity: 0.98;
+  overflow-x: hidden;
+  transition: width 0.1s;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.is-open {
+  width: 100%;
+  transition: width 0.1s;
+}
+
+ul {
+  list-style-type: none
+}
+
+.menu-icon {
+  cursor: pointer;
+  z-index: 2;
+}
+/*RIGHT AREA*/
+.right-container {
+  width: 100%;
+  color: var(--theme-text-color);
+  background: var(--theme-background-color);
+}
+
+.work-card {
+  border-bottom: solid 1px var(--theme-border-color);
+  padding-bottom: 3rem;
+}
+
+.work-screenshot {
+  width: 100%;
+  margin-top: 1.5rem;
+}
+
+.work-description {
+  padding-top: 1.5rem;
+}
+
+.work-description-title {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.work-description-text {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+@media screen and (min-width:640px) {
+  .left-container {
+    background-color: var(--theme-background-color);
+    flex: 0;
+    min-width: 200px;
+    height: 100vh;
+    flex-direction: column;
+  }
+
+  .presentation {
+    width:  100%;
+    flex-direction: column-reverse;
+  }
+
+  #ruby {
+    width: 3rem;
+  }
+
+  .menu {
+    left: 0;
+  }
+
+  .contact {
+    width: 100%;
+    display: inline;
+  }
+
+  .right-container {
+    flex: 1;
+  }
+
+  .work-card {
+    padding-bottom: 2px;
+  }
+
+  .work-description-title {
+    padding: 0px;
+  }
+
+  .work-description-text {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .work-screenshot {
+    margin-top: 1.5rem;
+  }
+}
+
+@media screen and (min-width:1024px) {
+  .left-container {
+    min-width: 270px;
+  }
+
+  .presentation {
+    flex-direction: row;
+  }
+
+  .work-card {
+    display: flex;
+    flex-wrap: nowrap;
+    padding-bottom: 0;
+  }
+
+  .work-description {
+    max-width: 400px;
+    padding-bottom: 2rem;
+  }
+
+  .work-screenshot {
+    flex-shrink: 1;
+    max-width: 70%;
+    height: 100%;
+  }
+}
+
+@media screen and (min-width:1359px) {
+  .left-container {
+    min-width: 380px
+  }
+}
+
+
+
+/*UTILITIES*/
+
+/* Colors */
+:root {
+  --theme-background-color: #000000;
+  --theme-text-color: #FFFFFF;
+  --theme-border-color: #FFFFFF;
+  --theme-body-color: transparent;
+  --theme-ruby-color: #FF0000;
+  --theme-menu-color: #000000;
+}
+
+
+ .hidden {
+  opacity: 0;
+  max-height: 0;
+  visibility: hidden;
+  transition: all 0.3s;
+
+}
+
+.visible {
+  max-height: 100px;
+  opacity: 1;
+  visibility: visible;
+  transition: all 0.3s;
+}
+
+/*Fonts*/
+.major {
+  font-family: 'Major Mono Display', monospace;
+}

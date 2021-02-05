@@ -3,43 +3,60 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
-  <title>Barnabe</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Major+Mono+Display&family=Open+Sans&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="stylesheets/hamburgers.css" rel="stylesheet">
+  <link rel="stylesheet" href="stylesheets/style.css">
+  <title>Barnabé</title>
 </head>
 <body>
   <div class="flex-wrapper">
     <div class="left-container">
-      <h1 class="major">BArnABe DuBus</h1>
-      <h2 class="major">RuBy DeVeloPEr</h2>
-      <div class="contact">
-        <h4>contact</h4>
-        <ul>
-          <li>twitter</li>
-          <li>github</li>
-          <li>dribble</li>
-        </ul>
+      <div class="presentation">
+        <svg enable-background="new 0 0 128 128" id="ruby" version="1.1" viewBox="0 0 128 128" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M112.005,50.192h-96c-0.778,0-1.485-0.451-1.813-1.157s-0.217-1.538,0.284-2.132L37.5,19.595  c0.38-0.451,0.939-0.711,1.529-0.711h49.957c0.59,0,1.149,0.26,1.529,0.711l23.019,27.308c0.501,0.595,0.612,1.427,0.284,2.132  S112.783,50.192,112.005,50.192z M20.308,46.192h87.396L88.057,22.884H39.959L20.308,46.192z"/><polygon points="64.005,108.299 14.475,49.48 17.535,46.904 64.005,102.088 110.475,46.904 113.535,49.48 "/><path d="M64.005,107.193L64.005,107.193c-0.849,0-1.604-0.535-1.886-1.335L42.023,48.857c-0.221-0.625-0.117-1.317,0.275-1.851  l20.096-27.308c0.752-1.024,2.467-1.024,3.221,0l20.1,27.308c0.393,0.533,0.496,1.226,0.275,1.851l-20.1,57.001  C65.609,106.658,64.854,107.193,64.005,107.193z M46.147,48.525l17.857,50.654l17.861-50.654L64.005,24.258L46.147,48.525z"/><rect height="4" transform="matrix(0.1759 0.9844 -0.9844 0.1759 68.1737 -12.3602)" width="27.74" x="27.599" y="32.538"/><rect height="27.741" transform="matrix(0.9844 0.176 -0.176 0.9844 7.431 -14.695)" width="4" x="84.545" y="20.668"/></svg>
+        <div class="presentation-text">
+          <h1 class="name major">BArnABé DuBus</h1>
+          <h2 class="job major">RuBy DeVeloPEr</h2>
+        </div>
       </div>
-      <div class="theme-form-wrapper">
-        <p>Choose a theme:</p>
-        <ul id="theme-select" class="colapsed">
-          <li data-value="default" class="visible">Default</li>
-          <li data-value="america" class="hidden">America</li>
-          <li data-value="soft" class="hidden">Soft</li>
-        </ul>
-      <!-- <label for="theme-select">Choose a theme:</label>
-      <select name="themes" id="theme-select">
-          <option value="default">Default : black</option>
-          <option value="america">America</option>
-          <option value="soft">Soft</option>
-      </select> -->
+      <div class="menu-icon">
+        <button class="hamburger hamburger--collapse" type="button">
+          <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+          </span>
+        </button>
+      </div>
+      <div class="menu">
+        <div class="contact">
+          <h4>Contact</h4>
+          <ul>
+            <li><i>Twitter</i></li>
+            <li><i>Github</i></li>
+            <li><i>Dribble</i></li>
+          </ul>
+        </div>
+        <div class="theme-form-wrapper">
+          <p>Choose a theme:</p>
+          <ul id="theme-select" class="colapsed">
+            <li data-value="default" class="visible">Default</li>
+            <li data-value="america" class="hidden">America</li>
+            <li data-value="soft" class="hidden">Soft</li>
+            <li data-value="dahlia" class="hidden">Violet / Dhalia</li>
+            <li data-value="taipei" class="hidden">Taipei</li>
+            <li data-value="chicago" class="hidden">Chicago</li>
+            <li data-value="grey" class="hidden">50 Shades</li>
+            <li data-value="gradient" class="hidden">Gradient</li>
+          </ul>
+        </div>
       </div>
     </div>
     <div class="right-container">
       <div class="work-list">
-        <div class="work-card">
+        <div class="work-card flex-wrapper">
           <div class="work-description">
-            <h3 class="work-title">Titre</h3>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vitae hic laboriosam illo quos cupiditate fugiat aliquam! Exercitationem pariatur blanditiis, a. Temporibus repellendus facilis eligendi ab nobis modi fugit officiis aperiam.
+            <h3 class="work-description-title">Titre</h3>
+            <p class="work-description-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vitae hic laboriosam illo quos cupiditate fugiat aliquam! Exercitationem pariatur blanditiis, a. Temporibus repellendus facilis eligendi ab nobis modi fugit officiis aperiam.
             Repudiandae commodi nam repellendus, maiores delectus nihil ut asperiores quo sapiente perspiciatis officia sit veniam. Doloribus consequatur sed, inventore nam vitae repudiandae quia blanditiis unde dignissimos facilis debitis laborum atque!
             Eos eveniet, tempore nam dolore aliquid cum repellendus at veniam neque id possimus adipisci quaerat, aspernatur minus tempora saepe dolores animi. Earum dolorem hic ab dolor nesciunt culpa aliquid labore.
             Consequatur, natus. Commodi animi aut inventore laboriosam, consequuntur iure neque harum necessitatibus ad ipsam recusandae eos, nesciunt amet error illo! Possimus, tempore, minima? Adipisci, asperiores iure impedit expedita reprehenderit odio?
@@ -47,37 +64,31 @@
           </div>
           <img class="work-screenshot" src="https://via.placeholder.com/1024x768.png" alt="">
         </div>
-        <div class="work-card">
+        <div class="work-card flex-wrapper">
           <div class="work-description">
-            <h3 class="work-title">Titre</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod tempora esse, similique quo. Unde quaerat praesentium dolorum, rem et asperiores cumque porro delectus deserunt ut sapiente quos error dolorem sed.
+            <h3 class="work-description-title">Titre</h3>
+            <p class="work-description-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod tempora esse, similique quo. Unde quaerat praesentium dolorum, rem et asperiores cumque porro delectus deserunt ut sapiente quos error dolorem sed.
             Suscipit molestias distinctio illo, voluptas asperiores vero obcaecati tempore adipisci odit laudantium sed dolor commodi officiis, quaerat, repudiandae deserunt placeat nisi quisquam recusandae facilis sit quidem. Atque, consequuntur consequatur fugit.
             Ratione soluta possimus ut tempore, perferendis, similique repellendus et? Quia porro, dolorem cumque ad ex itaque blanditiis praesentium incidunt? Velit modi eos dolorem necessitatibus itaque numquam, dignissimos nostrum, aspernatur ex.
             Numquam porro vel ab ducimus ipsa ex amet quis, cupiditate aut quia odio delectus explicabo corrupti sed quidem unde, deleniti facilis repudiandae possimus error. Est adipisci fugiat explicabo alias reiciendis.
             Placeat voluptatibus nihil unde incidunt odit accusantium atque officiis molestiae ratione sit quam commodi excepturi accusamus, earum suscipit voluptatum reprehenderit dignissimos? Nobis, nostrum, iste. Earum pariatur nihil qui dolores consequatur.</p>
-            </div>
-          <img class="work-screenshot" src="https://via.placeholder.com/1024x768.png" alt="">
           </div>
+          <img class="work-screenshot" src="https://via.placeholder.com/1024x768.png" alt="">
         </div>
-        <div class="work-card">
+        <div class="work-card flex-wrapper">
           <div class="work-description">
-            <h3 class="work-title">Titre</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, porro adipisci sequi perferendis maxime, numquam inventore sint error, hic dolore dignissimos cupiditate esse, modi debitis cum reprehenderit vero magnam repellendus?
+            <h3 class="work-description-title">Titre</h3>
+            <p class="work-description-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, porro adipisci sequi perferendis maxime, numquam inventore sint error, hic dolore dignissimos cupiditate esse, modi debitis cum reprehenderit vero magnam repellendus?
             Reprehenderit veniam rerum suscipit maxime magnam expedita dolorem cum nemo, voluptatibus laborum alias odio, illo cupiditate quisquam porro, quidem ipsa assumenda iure in? Quo animi, illo, ipsam placeat culpa atque.
-            Dolorum animi pariatur dolores, voluptate totam, repellat saepe obcaecati tenetur tempore autem impedit quos atque iure. Facere ex ducimus architecto corporis odit, illo aperiam, ut maiores dignissimos qui consectetur iusto.
-            Fugiat amet recusandae nihil minus nemo necessitatibus omnis harum similique nesciunt obcaecati fugit quae officiis sint iure saepe sequi doloremque ad error neque, doloribus, dolor? Totam cum dolorum pariatur ipsum!
-            Impedit ullam blanditiis architecto rerum consequuntur eos nulla, facere, quod laboriosam explicabo a tenetur magnam veritatis fugit inventore ipsam vero, ducimus consectetur laborum voluptate voluptatibus qui, dolorum aperiam saepe distinctio!</p>
           </div>
           <img class="work-screenshot" src="https://via.placeholder.com/1024x768.png" alt="">
         </div>
-        <div class="work-card">
+        <div class="work-card flex-wrapper">
           <div class="work-description">
-            <h3 class="work-title">Titre</h3>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing, elit. Assumenda, fuga repellat. Quo saepe eveniet ad facilis dolorem fugit id, repellendus perferendis voluptas iste omnis alias aliquam aperiam rem consectetur eius!
+            <h3 class="work-description-title">Titre</h3>
+            <p class="work-description-text">Lorem ipsum dolor sit, amet consectetur adipisicing, elit. Assumenda, fuga repellat. Quo saepe eveniet ad facilis dolorem fugit id, repellendus perferendis voluptas iste omnis alias aliquam aperiam rem consectetur eius!
             Illum eos quae dolorum quas est necessitatibus et minus blanditiis sit molestias nisi excepturi non asperiores neque modi, beatae pariatur dolorem aliquam nulla repudiandae! Dolorem saepe cupiditate esse. Veritatis, facilis?
             Magni placeat minima labore quos cupiditate mollitia eius odio accusamus aliquid, quibusdam iure voluptas ab ipsum fugiat nam temporibus, consequatur delectus asperiores id eligendi corrupti? Magni exercitationem, non nemo laborum.
-            Quisquam quibusdam voluptatum obcaecati est, consectetur, ad porro facere eos quis expedita saepe odit. Architecto voluptatibus voluptates odio, quidem rerum. Quo possimus corporis consequatur vitae, nobis, neque ut laboriosam recusandae.
-            Amet inventore temporibus delectus autem pariatur commodi, explicabo accusantium voluptatum molestias accusamus reiciendis? Accusamus, laborum ipsum enim iusto doloremque iste optio, exercitationem non ipsa, delectus officia eum! Aliquid, voluptatibus, fugiat?</p>
           </div>
           <img class="work-screenshot" src="https://via.placeholder.com/1024x768.png" alt="">
         </div>
