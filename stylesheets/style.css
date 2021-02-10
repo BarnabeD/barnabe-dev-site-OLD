@@ -53,28 +53,13 @@ a {
   width: 4rem;
   stroke: var(--theme-ruby-color);
   fill: var(--theme-ruby-color);
-  animation:tilt 3s linear infinite;
+  transform:rotate(45deg);
+  animation:tilt 2.5s ease-in-out infinite;
 }
 @keyframes tilt {
-  0% {
-    /*-webkit-transform: rotate(0deg);*/
-    transform:rotate(0deg);
-  }
-  25% {
-    /*-webkit-transform: rotate(45deg);*/
-    transform:rotate(45deg);
-  }
   50% {
     /*-webkit-transform: rotate(90deg);*/
-    transform:rotate(0deg);
-  }
-  75% {
-    /*-webkit-transform: rotate(90deg);*/
     transform:rotate(-45deg);
-  }
-  100% {
-    /*-webkit-transform: rotate(90deg);*/
-    transform:rotate(0deg);
   }
 }
 
@@ -153,11 +138,13 @@ ul {
 .work-description-title {
   padding-left: 10px;
   padding-right: 10px;
+  margin-bottom: 20px;
 }
 
-.work-description-text {
+.work-description-text * {
   padding-left: 20px;
   padding-right: 20px;
+  margin-bottom: 20px;
 }
 
 @media screen and (min-width:640px) {
@@ -199,7 +186,7 @@ ul {
     padding: 0px;
   }
 
-  .work-description-text {
+  .work-description-text * {
     padding-left: 10px;
     padding-right: 10px;
   }
