@@ -39,6 +39,17 @@ a {
   flex-direction: row;
   justify-content: space-between;
   border-bottom: solid 1px var(--theme-border-color);
+  transition: font-size 0.25s;
+}
+
+.left-container-reduced {
+  font-size: 70%;
+  transition: font-size 0.25s;
+}
+
+.left-container-hidden {
+  top: -100%;
+  transition: top 1s;
 }
 
 .presentation {
@@ -51,15 +62,16 @@ a {
 
 #ruby {
   width: 4rem;
+  transition: width 0.25s;
   stroke: var(--theme-ruby-color);
   fill: var(--theme-ruby-color);
-  transform:rotate(45deg);
-  animation:tilt 2.5s ease-in-out infinite;
+  transform: rotate(45deg);
+  animation: tilt 2.5s ease-in-out infinite;
 }
 @keyframes tilt {
   50% {
     /*-webkit-transform: rotate(90deg);*/
-    transform:rotate(-45deg);
+    transform: rotate(-45deg);
   }
 }
 

@@ -1,3 +1,4 @@
+// Change site theme
 const select = document.querySelector('#theme-select')
 const options = document.querySelectorAll('#theme-select > li')
 
@@ -114,6 +115,7 @@ const themes = {
   },
 }
 
+// Hamburger menu behaviors
 const closeHamburgerMenu = () => {
   menu.classList.remove('is-open')
   hamburger.classList.remove("is-active")
@@ -132,7 +134,7 @@ document.addEventListener('keyup', (event) => {
   }
 })
 
-
+// drop down for stack list
 const clickListener = (event) => {
   const div = event.currentTarget
   const ul = div.querySelector('ul')
@@ -161,6 +163,29 @@ stackLinksDropdown.forEach((el) => {
   el.addEventListener('click', clickListener)
 })
 
+
+let smallDeviceMediaQuery = window.matchMedia("(max-width: 639px)")
+const headerBar = document.querySelector('.left-container')
+const ruby = document.querySelector('#ruby')
+
+const scrollNavbar = () => {
+  console.log(window.pageYOffset)
+  if (window.pageYOffset > 100 && window.pageYOffset <= 250) {
+    headerBar.classList.add('left-container-reduced')
+  } else if (window.pageYOffset > 250) {
+    headerBar.classList.add('left-container-hidden')
+  } else {
+    headerBar.classList.remove('left-container-reduced')
+    headerBar.classList.remove('left-container-hidden')
+  }
+}
+
+if (smallDeviceMediaQuery.matches) {
+  window.addEventListener('scroll', scrollNavbar)
+}
+
+
+// Console easterEgg
 const art = `%c
 \n\
 \n\
