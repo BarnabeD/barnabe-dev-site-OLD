@@ -131,3 +131,118 @@ document.addEventListener('keyup', (event) => {
     closeHamburgerMenu()
   }
 })
+
+
+const clickListener = (event) => {
+  const div = event.currentTarget
+  const ul = div.querySelector('ul')
+  const dropdownTitle = div.firstElementChild
+  let dropdownTitleText = dropdownTitle.innerHTML
+  div.removeEventListener('click', clickListener)
+  ul.classList.replace('stack-hidden', 'stack-display') || ul.classList.replace('stack-display', 'stack-hidden')
+  dropdownTitle.classList.add('fadeout')
+  const fadeInOutTitle = (text) => {
+    setTimeout(() => {
+      dropdownTitle.innerHTML = text
+      dropdownTitle.classList.remove('fadeout')
+      dropdownTitle.classList.add('fadein')
+      div.addEventListener('click', clickListener)
+    }, 250)
+  }
+  if (dropdownTitle.innerHTML === 'Show me under the hood <span class="material-icons">expand_more</span>') {
+    fadeInOutTitle('Close it <span class="material-icons">expand_less</span>')
+  } else {
+    fadeInOutTitle('Show me under the hood <span class="material-icons">expand_more</span>')
+  }
+}
+
+const stackLinksDropdown = document.querySelectorAll(".stack-links-dropdown")
+stackLinksDropdown.forEach((el) => {
+  el.addEventListener('click', clickListener)
+})
+
+const art = `%c
+\n\
+\n\
+\n\
+\n\
+  --------------------8<-------------[ cut here ]-------------------------------\n\
+\n\
+\n\
+\n\
+\n\
+                                    _..__\n\
+                                  .' I   '.\n\
+                                  |.-"""-.|\n\
+                                 _;.-"""-.;_\n\
+                             _.-' _..-.-.._ '-._\n\
+                            ';--.-(_o_I_o_)-.--;'\n\
+                             \`. | |  | |  | | .\`\n\
+                               \`-\\|  | |  |/-'\n\
+                                  |  | |  |\n\
+                                  |  \\_/  |\n\
+                               _.'; ._._. ;'._\n\
+                          _.-'\`; | \\  -  / | ;'-.\n\
+                        .' :  /  |  |   |  |  \\  '.\n\
+                       /   : /__ \\  \\___/  / __\\ : \`.\n\
+                      /    |   /  '._/_\_.'  \\   :   \`\\ \n\
+                     /     .  \`---;"""""'-----\`  .     \\ \n\
+                    /      |      |()    ()      |      \\ \n\
+                   /      /|      |              |\\      \\ \n\
+                  /      / |      |()    ()      | \\      \\ \n\
+                  |     /  |                     |  \\     | \n\
+                  \\     \\   |][     |   |    ][ |   /     / \n\
+                   \\     \\ ;=""====='"""'====""==; /     / \n\
+                    |/\`\\  \\/      |()    ()      \\/  /\`\\| \n\
+                     |_/.-';      |              |\`-.\\_| \n\
+                       /   |      ;              :   \\ \n\
+     .-----------------|__. |-------------------/ .__|-----------------.\n\
+     | .--------------/     /------------------/     /---------------. |\n\
+     | |              \`-\`-\`-'                  \`-\`-\`-'               | |\n\
+     | |                                                             | |\n\
+     | |                    Hello dear inspector !                   | |\n\
+     | |                                                             | |\n\
+     | |         Welcome on my humble, small developer portfolio.    | |\n\
+     | |           You are maybe here to investigate my job,         | |\n\
+     | |         so please let me explain to you my approach.        | |\n\
+     | |                                                             | |\n\
+     | |       As a Ruby developer, I work with the magic of Rails,  | |\n\
+     | |              my goal here was to build the boring ways      | |\n\
+     | |         no framework, no site builder, no SSG, no CMS,      | |\n\
+     | |                no package manager, no bundle.               | |\n\
+     | |                        no magic here.                       | |\n\
+     | |                                                             | |\n\
+     | |                Old-fashioned, 1999 stylish brew.            | |\n\
+     | |                                                             | |\n\
+     | |         Just index.html, style.css and main.js files        | |\n\
+     | |                       on github pages.                      | |\n\
+     | |                                                             | |\n\
+     | |                                                             | |\n\
+     | |           By the way : I'm curently looking for a job,      | |\n\
+     | |                but no more ASCII Art, I promise.            | |\n\
+     | |                                                             | |\n\
+     | |                                                B.           | |\n\
+     | |_____________________________________________________________| |\n\
+     |_________________________________________________________________|\n\
+                           ;      |              |\n\
+                           |      :              ;\n\
+                           |      |              ;\n\
+                           |      |              ;\n\
+                           '-._   ;           _.-'\n\
+                               \`;"--.....--";\`\n\
+                                |    | |    |\n\
+                                |    | |    |\n\
+                                |    | |    |\n\
+                                T----T T----T\n\
+                           _..._L____J L____J _..._\n\
+                         .\` "-. \`%   | |    %\` .-" \`.\n\
+                        /      \\    .: :.     /      \\ \n\
+                        '-..___|_..=:\` \`-:=.._|___..-'\n\
+\n\
+\n\
+\n\
+--------------------8<-------------[ cut here ]-------------------------------\n\
+\n\
+\n\
+`
+// console.log(art, "font-family:monospace; font-style:italic; color:violet")
