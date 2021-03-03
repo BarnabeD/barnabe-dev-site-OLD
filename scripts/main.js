@@ -270,4 +270,4 @@ const art = `%c
 \n\
 \n\
 `
-// console.log(art, "font-family:monospace; font-style:italic; color:violet")
+console.log(art, "font-family:monospace; font-style:italic; color:violet")
